@@ -35,7 +35,7 @@ public class AgendaDeConsultaService {
             return medicoRepository.getReferenceById(datosAgendarConsulta.idMedico());
         }
         if(datosAgendarConsulta.especialidad() == null){
-            throw new ValidacionDeIntegridad("debe seleccionarse una especialidad para el medico")
+            throw new ValidacionDeIntegridad("debe seleccionarse una especialidad para el medico");
         }
         return medicoRepository.seleccionarMedicoConEspecialidadEnFecha(datosAgendarConsulta.especialidad(),
                 datosAgendarConsulta.fecha());
